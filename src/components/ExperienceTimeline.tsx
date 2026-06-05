@@ -6,7 +6,7 @@ import { useLanguage } from "./LanguageProvider";
 import ScrollReveal from "./ScrollReveal";
 
 export default function ExperienceTimeline() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <section id="experience" className="px-4 py-20 sm:py-24">
@@ -20,7 +20,7 @@ export default function ExperienceTimeline() {
               {t.sections.experienceTitle}
             </h2>
             <p className="max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-400">
-              Enterprise development, system integration, database operations, and long-term application maintenance.
+              {t.sections.experienceSummary}
             </p>
           </div>
         </ScrollReveal>
@@ -73,7 +73,7 @@ export default function ExperienceTimeline() {
                           )}
                           {experience.location && (
                             <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-300/60 bg-white/55 px-3 py-1.5 dark:border-white/10 dark:bg-white/[0.04]">
-                              <MapPin size={13} /> {experience.location}
+                              <MapPin size={13} /> {experience.location[language]}
                             </span>
                           )}
                         </div>
@@ -84,7 +84,7 @@ export default function ExperienceTimeline() {
                     </div>
 
                     <ul className="grid gap-2.5 p-5 sm:p-6">
-                      {experience.responsibilities.map((item) => (
+                      {experience.responsibilities[language].map((item) => (
                         <li
                           key={item}
                           className="flex gap-2.5 text-sm leading-6 text-slate-600 dark:text-slate-300"

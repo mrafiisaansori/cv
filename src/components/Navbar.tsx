@@ -49,7 +49,7 @@ export default function Navbar() {
         className={cn(
           "mx-auto flex max-w-7xl items-center justify-between rounded-full border px-4 py-3 transition-all duration-200",
           scrolled
-            ? "border-slate-200/80 bg-white/78 shadow-[0_12px_40px_rgba(15,23,42,0.10)] backdrop-blur-md dark:border-white/10 dark:bg-[#050B18]/78"
+            ? "border-slate-200/80 bg-white/78 shadow-[0_12px_40px_rgba(15,23,42,0.10)] backdrop-blur-sm dark:border-white/10 dark:bg-[#050B18]/78"
             : "border-transparent bg-transparent"
         )}
       >
@@ -103,7 +103,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -12, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -12, scale: 0.98 }}
-            className="mx-auto mt-3 max-w-7xl overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.14)] backdrop-blur-md lg:hidden dark:border-white/10 dark:bg-[#050B18]/92"
+            className="mx-auto mt-3 max-w-7xl overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.14)] backdrop-blur-sm lg:hidden dark:border-white/10 dark:bg-[#050B18]/92"
           >
             <div className="mb-2 sm:hidden">
               <LanguageToggle />

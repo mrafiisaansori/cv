@@ -36,7 +36,7 @@ export default function ScrollReveal({
       whileInView="visible"
       viewport={{ once: true, margin: "-60px" }}
       variants={variants[animation]}
-      transition={{ duration: 0.48, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.36, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>

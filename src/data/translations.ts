@@ -18,7 +18,6 @@ export const translations = {
       description:
         "I build and maintain scalable web applications, enterprise integrations, and data-driven systems for business operations.",
       viewProjects: "View Projects",
-      downloadCv: "Download CV",
       contactMe: "Contact Me",
       stats: ["8+ Years Experience", "10+ Portfolio Projects", "Enterprise System Integration"],
       cardTitle: "Developer Engineer",
@@ -43,9 +42,11 @@ export const translations = {
     sections: {
       experienceEyebrow: "Career Journey",
       experienceTitle: "Engineering experience across enterprise systems",
+      experienceSummary:
+        "Enterprise development, system integration, database operations, and long-term application maintenance.",
       skillsEyebrow: "Skills / Tech Stack",
       skillsTitle: "Practical stack for production systems",
-      portfolioEyebrow: "Case Studies",
+      portfolioEyebrow: "Portfolio",
       portfolioTitle: "Selected projects, integration workflows, and product platforms.",
       certificationEyebrow: "Certifications",
       certificationTitle: "Validated learning and professional growth",
@@ -56,7 +57,7 @@ export const translations = {
       contactTitle: "Let's discuss systems, products, and integration work."
     },
     portfolio: {
-      viewDetail: "View Case Study",
+      viewDetail: "View Portfolio",
       overview: "Project Overview",
       techStack: "Tech Stack",
       keyFeatures: "Key Features",
@@ -64,7 +65,6 @@ export const translations = {
     },
     contact: {
       email: "Email",
-      github: "GitHub placeholder",
       whatsapp: "+62 821-8700-0882"
     },
     footer: {
@@ -88,7 +88,6 @@ export const translations = {
       description:
         "Saya membangun dan merawat aplikasi web skalabel, integrasi sistem enterprise, serta sistem berbasis data untuk operasional bisnis.",
       viewProjects: "Lihat Project",
-      downloadCv: "Unduh CV",
       contactMe: "Hubungi Saya",
       stats: ["8+ Tahun Pengalaman", "10+ Project Portfolio", "Integrasi Sistem Enterprise"],
       cardTitle: "Developer Engineer",
@@ -113,9 +112,11 @@ export const translations = {
     sections: {
       experienceEyebrow: "Perjalanan Karier",
       experienceTitle: "Pengalaman engineering untuk sistem enterprise",
+      experienceSummary:
+        "Pengembangan aplikasi enterprise, integrasi sistem, operasional database, dan maintenance aplikasi jangka panjang.",
       skillsEyebrow: "Keahlian / Tech Stack",
       skillsTitle: "Stack praktis untuk sistem production",
-      portfolioEyebrow: "Studi Kasus",
+      portfolioEyebrow: "Portfolio",
       portfolioTitle: "Project pilihan, workflow integrasi, dan platform produk.",
       certificationEyebrow: "Sertifikasi",
       certificationTitle: "Pembelajaran profesional dan validasi kompetensi",
@@ -126,7 +127,7 @@ export const translations = {
       contactTitle: "Mari diskusikan sistem, produk, dan kebutuhan integrasi."
     },
     portfolio: {
-      viewDetail: "Lihat Studi Kasus",
+      viewDetail: "Lihat Portofolio",
       overview: "Ringkasan Project",
       techStack: "Tech Stack",
       keyFeatures: "Fitur Utama",
@@ -134,7 +135,6 @@ export const translations = {
     },
     contact: {
       email: "Email",
-      github: "Placeholder GitHub",
       whatsapp: "+62 821-8700-0882"
     },
     footer: {

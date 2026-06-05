@@ -33,21 +33,21 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[70] grid place-items-center overflow-y-auto bg-slate-950/70 p-4 backdrop-blur-md"
+          className="fixed inset-0 z-[70] grid place-items-center overflow-y-auto bg-slate-950/72 p-4 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.12 }}
           onMouseDown={onClose}
         >
           <motion.article
             role="dialog"
             aria-modal="true"
             aria-label={project.title}
-            initial={{ opacity: 0, scale: 0.95, y: 16 }}
+            initial={{ opacity: 0, scale: 0.985, y: 8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: 12 }}
-            transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, scale: 0.99, y: 6 }}
+            transition={{ duration: 0.14, ease: [0.22, 1, 0.36, 1] }}
             onMouseDown={(event) => event.stopPropagation()}
             className="relative flex max-h-[85vh] w-full max-w-[900px] flex-col overflow-hidden rounded-3xl border border-white/12 bg-[#0a1124] text-white shadow-[0_30px_90px_-20px_rgba(0,0,0,0.7)] ring-1 ring-white/5 lg:flex-row"
           >
@@ -55,7 +55,7 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
               type="button"
               aria-label={t.portfolio.close}
               onClick={onClose}
-              className="absolute right-3 top-3 z-30 grid h-9 w-9 place-items-center rounded-full border border-white/15 bg-slate-950/60 text-slate-200 backdrop-blur-md transition hover:bg-slate-800 hover:text-white"
+              className="absolute right-3 top-3 z-30 grid h-9 w-9 place-items-center rounded-full border border-white/15 bg-slate-950/75 text-slate-200 transition hover:bg-slate-800 hover:text-white"
             >
               <X size={17} />
             </button>
@@ -68,6 +68,7 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
                     alt={project.title}
                     fill
                     sizes="(max-width: 1024px) 92vw, 400px"
+                    quality={74}
                     unoptimized={imageError}
                     onError={() => setImageError(true)}
                     className="object-contain"
@@ -75,10 +76,10 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
                 </div>
               </div>
               <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-2 lg:bottom-7 lg:left-7 lg:right-7">
-                <span className="rounded-full border border-cyanGlow/25 bg-cyanGlow/10 px-3 py-1 text-[11px] font-bold tracking-wide text-cyan-100 backdrop-blur-md">
+                <span className="rounded-full border border-cyanGlow/25 bg-cyanGlow/10 px-3 py-1 text-[11px] font-bold tracking-wide text-cyan-100">
                   {project.category}
                 </span>
-                <span className="rounded-full border border-accentGreen/30 bg-accentGreen/15 px-3 py-1 text-[11px] font-bold tracking-wide text-emerald-100 backdrop-blur-md">
+                <span className="rounded-full border border-accentGreen/30 bg-accentGreen/15 px-3 py-1 text-[11px] font-bold tracking-wide text-emerald-100">
                   {project.role}
                 </span>
               </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { profile } from "@/data/profile";
 import { useLanguage } from "./LanguageProvider";
 import ScrollReveal from "./ScrollReveal";
@@ -11,7 +11,6 @@ export default function ContactSection() {
   const contacts = [
     { label: t.contact.email, value: profile.email, href: `mailto:${profile.email}`, Icon: Mail },
     { label: "LinkedIn", value: "linkedin.com/in/rafiisa", href: profile.linkedin, Icon: Linkedin },
-    { label: "GitHub", value: t.contact.github, href: profile.github, Icon: Github },
     { label: "WhatsApp", value: t.contact.whatsapp, href: profile.whatsapp, Icon: MessageCircle }
   ];
 
@@ -25,7 +24,7 @@ export default function ContactSection() {
           </h2>
         </ScrollReveal>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {contacts.map(({ label, value, href, Icon }, index) => (
             <ScrollReveal key={label} delay={index * 0.04}>
               <a

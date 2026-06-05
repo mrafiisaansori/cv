@@ -8,7 +8,7 @@ export default function LanguageToggle() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex h-10 items-center gap-1 rounded-full border border-slate-300/70 bg-white/70 p-1 text-xs font-black shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/[0.08]">
+    <div className="flex h-10 items-center gap-1 rounded-full border border-slate-300/70 bg-white/70 p-1 text-xs font-black shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.08]">
       <span className="grid h-8 w-8 place-items-center rounded-full text-slate-500 dark:text-slate-300">
         <Languages size={15} />
       </span>

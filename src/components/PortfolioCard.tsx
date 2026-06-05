@@ -29,12 +29,12 @@ export default function PortfolioCard({
       )}
     >
       <button type="button" onClick={onOpen} className="flex h-full w-full flex-col text-left">
-        {/* Thumbnail: full screenshot visible (object-contain on dark panel) */}
         <div className={cn("relative w-full bg-[#0b1430]", featured ? "aspect-[16/9]" : "aspect-[16/10]")}>
           <Image
             src={imageError ? fallbackProjectImage : project.image}
             alt={project.title}
             fill
+            quality={72}
             sizes={
               featured
                 ? "(max-width: 1280px) 100vw, 66vw"
@@ -54,7 +54,6 @@ export default function PortfolioCard({
           </div>
         </div>
 
-        {/* Body */}
         <div className={cn("flex h-full flex-col border-t border-slate-200/70 p-5 dark:border-white/10", featured && "sm:p-6")}>
           <div className="flex items-start justify-between gap-4">
             <h3

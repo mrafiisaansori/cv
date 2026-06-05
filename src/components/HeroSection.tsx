@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, Download, Mail, Sparkles } from "lucide-react";
+import { ArrowDown, Mail, Sparkles } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -23,7 +23,7 @@ export default function HeroSection() {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-10 lg:pt-12"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-white/65 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur-md dark:bg-white/[0.06] dark:text-slate-200">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-white/65 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur-sm dark:bg-white/[0.06] dark:text-slate-200">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full rounded-full bg-accentGreen opacity-70 motion-safe:animate-ping" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accentGreen" />
@@ -42,9 +42,6 @@ export default function HeroSection() {
             <MagneticButton href="#portfolio">
               {t.hero.viewProjects} <ArrowDown size={17} />
             </MagneticButton>
-            <MagneticButton href="/Muhammad-Rafi-Isa-Ansori-CV.pdf" variant="secondary">
-              {t.hero.downloadCv} <Download size={17} />
-            </MagneticButton>
             <MagneticButton href="#contact" variant="ghost">
               {t.hero.contactMe} <Mail size={17} />
             </MagneticButton>
@@ -59,7 +56,7 @@ export default function HeroSection() {
         >
           <div className="absolute -inset-5 rounded-[2.75rem] bg-gradient-to-br from-cyanGlow/18 via-electric/8 to-accentGreen/10 blur-2xl" />
           <motion.div
-            className="relative overflow-hidden rounded-[2.25rem] border border-slate-200/70 bg-white/80 p-3 shadow-[0_24px_90px_rgba(15,23,42,0.18)] backdrop-blur-md dark:border-white/10 dark:bg-white/[0.075] dark:shadow-[0_24px_90px_rgba(0,0,0,0.34)] sm:p-4"
+            className="relative overflow-hidden rounded-[2.25rem] border border-slate-200/70 bg-white/80 p-3 shadow-[0_24px_90px_rgba(15,23,42,0.18)] backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.075] dark:shadow-[0_24px_90px_rgba(0,0,0,0.34)] sm:p-4"
             animate={reduceMotion ? undefined : { y: [0, -8, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -75,7 +72,7 @@ export default function HeroSection() {
                 onError={() => setImageError(true)}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/12 bg-slate-950/60 p-4 text-white backdrop-blur-md">
+              <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/12 bg-slate-950/68 p-4 text-white">
                 <div className="flex items-center gap-2 text-sm font-semibold text-cyan-100">
                   <Sparkles size={15} className="text-accentGreen" />
                   {t.hero.cardTitle}

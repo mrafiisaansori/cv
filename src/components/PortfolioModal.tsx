@@ -11,7 +11,7 @@ const fallbackProjectImage =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='780' viewBox='0 0 1200 780'%3E%3Crect width='1200' height='780' rx='46' fill='%23635BFF'/%3E%3Ccircle cx='970' cy='170' r='120' fill='%2338BDF8' opacity='.5'/%3E%3Ccircle cx='220' cy='610' r='150' fill='%238B5CF6' opacity='.5'/%3E%3Crect x='120' y='130' width='960' height='520' rx='36' fill='%23ffffff' opacity='.1'/%3E%3Cpath d='M190 230h420M190 310h670M190 390h530M190 520h750' stroke='%23ffffff' stroke-width='24' stroke-linecap='round' opacity='.6'/%3E%3C/svg%3E";
 
 export default function PortfolioModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [imageError, setImageError] = useState(false);
   const reduceMotion = useReducedMotion();
 
@@ -71,7 +71,7 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
                 quality={80}
                 unoptimized={imageError}
                 onError={() => setImageError(true)}
-                className="object-cover object-top"
+                className="object-cover object-center"
               />
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent dark:from-[#0c0c16]" />
             </div>
@@ -90,7 +90,7 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
                 {t.portfolio.overview}
               </div>
               <h3 className="mt-3 text-2xl font-bold leading-tight tracking-tight">{project.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">{project.description}</p>
+              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">{project.description[language]}</p>
 
               {(project.demo || project.repo) && (
                 <div className="mt-5 flex flex-wrap gap-2.5">
@@ -123,7 +123,7 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
                   {t.portfolio.keyFeatures}
                 </h4>
                 <ul className="mt-3 grid gap-2">
-                  {project.features.map((feature) => (
+                  {project.features[language].map((feature) => (
                     <li
                       key={feature}
                       className="flex items-start gap-2 rounded-xl border border-black/[0.05] bg-black/[0.02] px-3 py-2.5 text-[13px] leading-5 text-slate-600 dark:border-white/[0.06] dark:bg-white/[0.03] dark:text-slate-300"

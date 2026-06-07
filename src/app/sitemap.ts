@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://rafiisa.vercel.app";
+  const siteUrl = "https://mrafiisa.vercel.app";
 
   return [
     {

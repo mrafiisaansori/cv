@@ -24,7 +24,10 @@ export default function Footer() {
           <div className="text-sm">
             <p className="font-semibold text-slate-900 dark:text-white">{profile.name}</p>
             <p className="text-slate-500 dark:text-slate-400">
-              {profile.role} {t.footer.copyright}
+              Web Developer &amp; Software Engineer · Surabaya, Indonesia
+            </p>
+            <p className="mt-0.5 text-xs text-slate-400 dark:text-slate-500">
+              {profile.role} · Jasa Pembuatan Web {t.footer.copyright}
             </p>
           </div>
         </div>

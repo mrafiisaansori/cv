@@ -19,6 +19,7 @@ export const translations = {
         "I build and maintain scalable web applications, enterprise integrations, and data-driven systems for business operations.",
       viewProjects: "View Projects",
       contactMe: "Contact Me",
+      downloadCv: "Download CV",
       stats: ["8+ Years Experience", "10+ Portfolio Projects", "Enterprise System Integration"],
       cardTitle: "Developer Engineer",
       cardText: "Full stack development, enterprise integration, and database-driven systems."
@@ -61,6 +62,8 @@ export const translations = {
       overview: "Project Overview",
       techStack: "Tech Stack",
       keyFeatures: "Key Features",
+      liveDemo: "Live Demo",
+      sourceCode: "Source Code",
       close: "Close project detail"
     },
     contact: {
@@ -89,6 +92,7 @@ export const translations = {
         "Saya membangun dan merawat aplikasi web skalabel, integrasi sistem enterprise, serta sistem berbasis data untuk operasional bisnis.",
       viewProjects: "Lihat Project",
       contactMe: "Hubungi Saya",
+      downloadCv: "Unduh CV",
       stats: ["8+ Tahun Pengalaman", "10+ Project Portfolio", "Integrasi Sistem Enterprise"],
       cardTitle: "Developer Engineer",
       cardText: "Full stack development, integrasi enterprise, dan sistem berbasis database."
@@ -131,6 +135,8 @@ export const translations = {
       overview: "Ringkasan Project",
       techStack: "Tech Stack",
       keyFeatures: "Fitur Utama",
+      liveDemo: "Demo Langsung",
+      sourceCode: "Kode Sumber",
       close: "Tutup detail project"
     },
     contact: {

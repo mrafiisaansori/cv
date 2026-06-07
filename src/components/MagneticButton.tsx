@@ -22,13 +22,14 @@ export default function MagneticButton({
   target
 }: MagneticButtonProps) {
   const base =
-    "inline-flex min-h-11 items-center justify-center rounded-full px-5 py-3 text-sm font-bold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyanGlow/70 motion-safe:hover:-translate-y-0.5";
+    "group/btn inline-flex min-h-11 items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold tracking-tight transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent motion-safe:hover:-translate-y-0.5 active:translate-y-0";
   const styles = {
-    primary: "bg-cyan-300 text-slate-950 shadow-[0_12px_34px_rgba(45,156,255,0.24)] hover:bg-accentGreen",
+    primary:
+      "bg-brand text-white shadow-brand hover:bg-brandDark",
     secondary:
-      "border border-slate-300/70 bg-white/70 text-slate-900 backdrop-blur-sm hover:border-cyan-300 hover:bg-white dark:border-white/12 dark:bg-white/[0.07] dark:text-white dark:hover:bg-white/[0.11]",
+      "border border-black/10 bg-white/80 text-slate-900 backdrop-blur-sm hover:border-brand/40 hover:bg-white dark:border-white/12 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/[0.1]",
     ghost:
-      "border border-transparent bg-transparent text-slate-700 hover:border-slate-300/70 hover:bg-white/60 dark:text-slate-200 dark:hover:border-white/12 dark:hover:bg-white/[0.07]"
+      "border border-black/10 bg-transparent text-slate-700 hover:border-brand/30 hover:bg-brand/[0.04] hover:text-brand dark:border-white/12 dark:text-slate-200 dark:hover:bg-white/[0.06] dark:hover:text-white"
   };
 
   if (href) {

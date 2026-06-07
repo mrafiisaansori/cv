@@ -19,24 +19,54 @@ html {
   overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 96px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   min-height: 100vh;
   overflow-x: clip;
-  color: #0f172a;
-  background: #f8fafc;
-  font-feature-settings: "ss01" on, "cv01" on;
+  color: #1a1a2e;
+  background: #fafaff;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  letter-spacing: -0.011em;
 }
 
 .dark body {
-  color: #f8fafc;
-  background: #030712;
+  color: #ececf3;
+  background: #08080f;
 }
 
 ::selection {
-  color: #030712;
-  background: #35f2a1;
+  color: #ffffff;
+  background: #635bff;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 91, 255, 0.28);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 91, 255, 0.5);
+  background-clip: padding-box;
+}
+
+/* Reusable gradient text */
+.text-gradient {
+  background-image: linear-gradient(110deg, #635bff 0%, #8b5cf6 45%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {

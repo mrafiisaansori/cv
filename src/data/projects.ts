@@ -7,6 +7,8 @@ export type Project = {
   techStack: string[];
   role: string;
   features: string[];
+  demo?: string;
+  repo?: string;
 };
 
 export const projects: Project[] = [
@@ -51,7 +53,7 @@ export const projects: Project[] = [
       "Online catalog platform for products and services. Users can share one catalog link, customers can browse products, add items to cart, and checkout through WhatsApp.",
     image: "/projects/linkatalog.png",
     techStack: ["Next.js", "Tailwind CSS"],
-    role: "Full Stack Developer",
+    role: "Founder",
     features: ["Shareable catalog link", "Product browsing", "Cart flow", "WhatsApp checkout", "Responsive storefront"]
   },
   {
@@ -73,7 +75,7 @@ export const projects: Project[] = [
       "Point of Sales application for sales processing, inventory management, customer management, reporting, analytics, and user access control.",
     image: "/projects/pos.png",
     techStack: ["CodeIgniter", "MySQL", "JavaScript", "Bootstrap"],
-    role: "Full Stack Developer",
+    role: "Founder",
     features: ["Sales processing", "Inventory management", "Customer management", "Reporting", "User access control"]
   },
   {

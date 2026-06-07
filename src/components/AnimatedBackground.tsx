@@ -1,10 +1,20 @@
 export default function AnimatedBackground() {
+  // indigo aurora background
   return (
-    <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden bg-[#f7fbff] dark:bg-[#040814]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_8%,rgba(45,156,255,0.18),transparent_30%),radial-gradient(circle_at_82%_14%,rgba(47,226,196,0.12),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(238,246,255,0.96))] dark:bg-[radial-gradient(circle_at_12%_8%,rgba(45,156,255,0.24),transparent_30%),radial-gradient(circle_at_82%_14%,rgba(47,226,196,0.12),transparent_26%),linear-gradient(180deg,#040814,#08111f_58%,#050914)]" />
-      <div className="absolute inset-0 opacity-[0.34] dark:opacity-[0.22] bg-[linear-gradient(rgba(29,155,255,0.13)_1px,transparent_1px),linear-gradient(90deg,rgba(29,155,255,0.13)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:linear-gradient(to_bottom,black,transparent_76%)]" />
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyanGlow/50 to-transparent" />
-      <div className="absolute left-[12%] top-[20%] h-56 w-56 rounded-full bg-cyanGlow/10 blur-2xl dark:bg-cyanGlow/8" />
+    <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden bg-[#fafaff] dark:bg-[#08080f]">
+      {/* base wash */}
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,#ffffff,#f3f2ff_55%,#eef1ff)] dark:bg-[linear-gradient(180deg,#08080f,#0c0b1a_55%,#08080f)]" />
+
+      {/* aurora blobs (GPU-friendly, subtle) */}
+      <div className="absolute -left-[12%] top-[-8%] h-[36rem] w-[36rem] rounded-full bg-brand/20 blur-[120px] will-change-transform motion-safe:animate-aurora dark:bg-brand/25" />
+      <div className="absolute right-[-10%] top-[6%] h-[30rem] w-[30rem] rounded-full bg-violet/15 blur-[120px] will-change-transform motion-safe:animate-aurora [animation-delay:-6s] dark:bg-violet/20" />
+      <div className="absolute bottom-[-12%] left-[30%] h-[28rem] w-[28rem] rounded-full bg-sky/12 blur-[120px] will-change-transform motion-safe:animate-aurora [animation-delay:-11s] dark:bg-sky/12" />
+
+      {/* fine grid */}
+      <div className="absolute inset-0 opacity-[0.4] dark:opacity-[0.18] bg-[linear-gradient(rgba(99,91,255,0.10)_1px,transparent_1px),linear-gradient(90deg,rgba(99,91,255,0.10)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_at_top,black,transparent_72%)]" />
+
+      {/* top hairline */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/45 to-transparent" />
     </div>
   );
 }

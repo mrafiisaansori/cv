@@ -33,6 +33,29 @@ export default function CertificationSection() {
               <p className="mt-5 max-w-2xl text-[15px] leading-8 text-slate-600 dark:text-slate-400">
                 {t.sections.certificationText}
               </p>
+              <div className="mt-7 divide-y divide-black/[0.06] overflow-hidden rounded-2xl border border-black/[0.06] bg-white/45 dark:divide-white/[0.08] dark:border-white/[0.08] dark:bg-white/[0.03]">
+                {profile.certifications.map((certification) => (
+                  <a
+                    key={`${certification.issuer}-${certification.title}`}
+                    href={certification.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex flex-col gap-3 px-4 py-4 transition hover:bg-brand/[0.06] dark:hover:bg-white/[0.05] sm:flex-row sm:items-center sm:justify-between"
+                  >
+                    <span>
+                      <span className="block text-sm font-bold leading-6 text-slate-950 dark:text-white">
+                        {certification.title}
+                      </span>
+                      <span className="mt-1 block text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                        {certification.issuer} - {certification.year}
+                      </span>
+                    </span>
+                    <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-brand transition group-hover:text-brandDark dark:text-brandLight dark:group-hover:text-white">
+                      {t.sections.certificateButton} <ExternalLink size={15} />
+                    </span>
+                  </a>
+                ))}
+              </div>
               <div className="mt-7">
                 <MagneticButton href={profile.certificationUrl} target="_blank">
                   {t.sections.certificationButton} <ExternalLink size={16} />

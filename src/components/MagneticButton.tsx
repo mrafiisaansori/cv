@@ -10,6 +10,7 @@ type MagneticButtonProps = {
   variant?: "primary" | "secondary" | "ghost";
   type?: "button" | "submit";
   target?: string;
+  download?: boolean | string;
 };
 
 export default function MagneticButton({
@@ -19,7 +20,8 @@ export default function MagneticButton({
   className,
   variant = "primary",
   type = "button",
-  target
+  target,
+  download
 }: MagneticButtonProps) {
   const base =
     "group/btn inline-flex min-h-11 items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold tracking-tight transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent motion-safe:hover:-translate-y-0.5 active:translate-y-0";
@@ -34,7 +36,13 @@ export default function MagneticButton({
 
   if (href) {
     return (
-      <Link href={href} target={target} onClick={onClick} className={cn(base, styles[variant], className)}>
+      <Link
+        href={href}
+        target={target}
+        download={download}
+        onClick={onClick}
+        className={cn(base, styles[variant], className)}
+      >
         <span className="flex items-center gap-2">{children}</span>
       </Link>
     );

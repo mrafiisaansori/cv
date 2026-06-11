@@ -43,7 +43,7 @@ export default function HeroSection() {
               {t.hero.viewProjects}
               <ArrowRight size={17} className="transition-transform group-hover/btn:translate-x-0.5" />
             </MagneticButton>
-            <MagneticButton href={profile.linkedin} target="_blank" variant="secondary">
+            <MagneticButton href={profile.cvUrl} download="Muhammad-Rafi-Isa-Ansori-CV.pdf" variant="secondary">
               {t.hero.downloadCv} <Download size={16} />
             </MagneticButton>
             <MagneticButton href="#contact" variant="ghost">

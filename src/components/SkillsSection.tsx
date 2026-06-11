@@ -30,7 +30,7 @@ export default function SkillsSection() {
           </h2>
         </ScrollReveal>
 
-        <div className="relative mt-9 max-w-full overflow-hidden py-4 [contain:paint] before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-16 before:bg-gradient-to-r before:from-[#fafaff] before:to-transparent after:absolute after:inset-y-0 after:right-0 after:z-10 after:w-16 after:bg-gradient-to-l after:from-[#fafaff] after:to-transparent dark:before:from-[#08080f] dark:after:from-[#08080f]">
+        <div className="relative mt-9 max-w-full overflow-hidden py-4 [contain:paint] before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-16 before:bg-gradient-to-r before:from-[#f4f4fb] before:to-transparent after:absolute after:inset-y-0 after:right-0 after:z-10 after:w-16 after:bg-gradient-to-l after:from-[#f4f4fb] after:to-transparent dark:before:from-[#070F2B] dark:after:from-[#070F2B]">
           <div className="flex w-max animate-marquee gap-3 will-change-transform hover:[animation-play-state:paused]">
             {marquee.map((skill, index) => (
               <span

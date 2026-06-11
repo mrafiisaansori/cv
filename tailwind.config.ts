@@ -10,26 +10,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Stripe-inspired indigo system
-        brand: "#635BFF",
-        brandLight: "#8E88FF",
-        brandDark: "#4B45D6",
-        violet: "#8B5CF6",
-        sky: "#38BDF8",
-        ink: "#0A0A12",
-        // legacy aliases -> mapped to new palette for safety
-        navy: "#0A0A12",
-        electric: "#635BFF",
-        cyanGlow: "#8B5CF6",
-        violetNight: "#1A1530",
-        accentGreen: "#38BDF8"
+        // Navy-lavender portfolio palette
+        brand: "#535C91",
+        brandLight: "#9290C3",
+        brandDark: "#1B1A55",
+        violet: "#9290C3",
+        sky: {
+          DEFAULT: "#9290C3",
+          700: "#535C91"
+        },
+        ink: "#070F2B",
+        // legacy aliases -> mapped to current palette for safety
+        navy: "#070F2B",
+        electric: "#535C91",
+        cyanGlow: "#9290C3",
+        violetNight: "#1B1A55",
+        accentGreen: "#9290C3"
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       boxShadow: {
-        brand: "0 14px 40px -12px rgba(99,91,255,0.45)",
-        soft: "0 18px 60px -20px rgba(15,15,40,0.25)"
+        brand: "0 14px 40px -12px rgba(83,92,145,0.48)",
+        soft: "0 18px 60px -20px rgba(7,15,43,0.26)"
       },
       keyframes: {
         marquee: {

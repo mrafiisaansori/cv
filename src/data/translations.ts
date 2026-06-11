@@ -51,8 +51,9 @@ export const translations = {
       portfolioTitle: "Selected projects, integration workflows, and product platforms.",
       certificationEyebrow: "Certifications",
       certificationTitle: "Validated learning and professional growth",
-      certificationText: "View my professional certifications on LinkedIn.",
+      certificationText: "Selected certifications from professional training and technical skill assessments.",
       certificationButton: "View Certifications",
+      certificateButton: "View Certificate",
       educationEyebrow: "Education",
       contactEyebrow: "Contact",
       contactTitle: "Let's discuss systems, products, and integration work."
@@ -124,8 +125,9 @@ export const translations = {
       portfolioTitle: "Project pilihan, workflow integrasi, dan platform produk.",
       certificationEyebrow: "Sertifikasi",
       certificationTitle: "Pembelajaran profesional dan validasi kompetensi",
-      certificationText: "Lihat sertifikasi profesional saya di LinkedIn.",
+      certificationText: "Sertifikasi pilihan dari pelatihan profesional dan assessment kemampuan teknis.",
       certificationButton: "Lihat Sertifikasi",
+      certificateButton: "Lihat Sertifikat",
       educationEyebrow: "Pendidikan",
       contactEyebrow: "Kontak",
       contactTitle: "Mari diskusikan sistem, produk, dan kebutuhan integrasi."

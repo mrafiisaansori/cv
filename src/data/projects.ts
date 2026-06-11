@@ -28,7 +28,7 @@ export const projects: Project[] = [
     },
     image: "/projects/pfuel.png",
     techStack: ["CodeIgniter", "PHP", "PostgreSQL", "JavaScript", "Bootstrap", "SAP Integration"],
-    role: "Developer Engineer / Maintainer",
+    role: "Software Engineer / Maintainer",
     features: {
       en: ["Online fuel request", "Stock distribution", "SAP synchronization", "Usage analytics", "IoT fueling realization"],
       id: ["Permintaan BBM online", "Distribusi stok", "Sinkronisasi SAP", "Analitik penggunaan", "Realisasi pengisian IoT"]
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     },
     image: "/projects/apbs.png",
     techStack: [".NET Core", "Oracle", "JavaScript", "Tailwind CSS"],
-    role: "Developer Engineer",
+    role: "Software Engineer",
     features: {
       en: ["Transaction request", "Approval workflow", "SAP-integrated billing", "User access management", "Cross-system integration"],
       id: ["Permintaan transaksi", "Alur persetujuan", "Penagihan terintegrasi SAP", "Manajemen akses pengguna", "Integrasi lintas sistem"]

@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -70,11 +69,7 @@ export default function Navbar() {
               )}
             >
               {active === item.href && (
-                <motion.span
-                  layoutId="active-nav"
-                  className="absolute inset-0 -z-10 rounded-lg bg-brand/10 dark:bg-brand/20"
-                  transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                />
+                <span className="absolute inset-0 -z-10 rounded-lg bg-brand/10 transition-all duration-200 dark:bg-brand/20" />
               )}
               {t.nav[item.key]}
             </Link>
@@ -97,30 +92,23 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -12, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -12, scale: 0.98 }}
-            className="mx-auto mt-3 max-w-6xl overflow-hidden rounded-3xl border border-black/[0.06] bg-white/92 p-3 shadow-soft backdrop-blur-xl lg:hidden dark:border-white/[0.08] dark:bg-[#0b0b16]/95"
-          >
-            <div className="mb-2 sm:hidden">
-              <LanguageToggle />
-            </div>
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={handleNav}
-                className="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-brand/[0.06] hover:text-brand dark:text-slate-100 dark:hover:bg-white/[0.06] dark:hover:text-white"
-              >
-                {t.nav[item.key]}
-              </Link>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {open && (
+        <div className="mx-auto mt-3 max-w-6xl overflow-hidden rounded-3xl border border-black/[0.06] bg-white/92 p-3 shadow-soft backdrop-blur-xl animate-fade-down lg:hidden dark:border-white/[0.08] dark:bg-[#0b0b16]/95">
+          <div className="mb-2 sm:hidden">
+            <LanguageToggle />
+          </div>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={handleNav}
+              className="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-brand/[0.06] hover:text-brand dark:text-slate-100 dark:hover:bg-white/[0.06] dark:hover:text-white"
+            >
+              {t.nav[item.key]}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

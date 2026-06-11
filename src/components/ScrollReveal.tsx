@@ -1,15 +1,15 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
 type Animation = "fadeUp" | "slideLeft" | "slideRight" | "scaleIn";
 
-const variants = {
-  fadeUp: { hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } },
-  slideLeft: { hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } },
-  slideRight: { hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } },
-  scaleIn: { hidden: { opacity: 0, y: 16, scale: 0.98 }, visible: { opacity: 1, y: 0, scale: 1 } }
+const animationClass: Record<Animation, string> = {
+  fadeUp: "reveal-fade-up",
+  slideLeft: "reveal-slide-left",
+  slideRight: "reveal-slide-right",
+  scaleIn: "reveal-scale-in"
 };
 
 export default function ScrollReveal({
@@ -23,22 +23,39 @@ export default function ScrollReveal({
   delay?: number;
   className?: string;
 }) {
-  const reduceMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
 
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px -60px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      variants={variants[animation]}
-      transition={{ duration: 0.36, delay, ease: [0.22, 1, 0.36, 1] }}
+    <div
+      ref={ref}
+      className={`${className} reveal ${animationClass[animation]}${visible ? " is-visible" : ""}`}
+      style={{ transitionDelay: visible && delay ? `${delay}s` : undefined }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

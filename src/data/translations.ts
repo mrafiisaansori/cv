@@ -13,22 +13,22 @@ export const translations = {
     },
     hero: {
       badge: "Available for Collaboration",
-      role: "Developer Engineer",
-      tagline: "Experienced Developer Engineer Delivering Innovative Solutions Across Diverse Projects",
+      role: "Software Engineer",
+      tagline: "Experienced Software Engineer Delivering Innovative Solutions Across Diverse Projects",
       description:
         "I build and maintain scalable web applications, enterprise integrations, and data-driven systems for business operations.",
       viewProjects: "View Projects",
       contactMe: "Contact Me",
       downloadCv: "Download CV",
       stats: ["8+ Years Experience", "10+ Portfolio Projects", "Enterprise System Integration"],
-      cardTitle: "Developer Engineer",
+      cardTitle: "Software Engineer",
       cardText: "Full stack development, enterprise integration, and database-driven systems."
     },
     about: {
       eyebrow: "About Me",
       title: "Reliable enterprise systems with clean, maintainable engineering.",
       paragraphs: [
-        "As a Developer Engineer at Integrasi Logistik Cipta Solusi, I contribute to the seamless integration of critical systems like P-Fuel with SAP, ensuring accurate synchronization of financial and inventory data. My role emphasizes maintaining system reliability, resolving technical issues, and improving operational efficiency through real-time data accessibility.",
+        "As a Software Engineer at Integrasi Logistik Cipta Solusi, I contribute to the seamless integration of critical systems like P-Fuel with SAP, ensuring accurate synchronization of financial and inventory data. My role emphasizes maintaining system reliability, resolving technical issues, and improving operational efficiency through real-time data accessibility.",
         "With over eight years of experience in software development, I design scalable and efficient systems that meet user needs. My expertise spans system analysis, maintenance, and database management, with a strong focus on practical solutions for enterprise-level projects."
       ],
       highlights: [
@@ -86,22 +86,22 @@ export const translations = {
     },
     hero: {
       badge: "Terbuka untuk Kolaborasi",
-      role: "Developer Engineer",
-      tagline: "Developer Engineer berpengalaman yang membangun solusi inovatif untuk beragam proyek",
+      role: "Software Engineer",
+      tagline: "Software Engineer berpengalaman yang membangun solusi inovatif untuk beragam proyek",
       description:
         "Saya membangun dan merawat aplikasi web skalabel, integrasi sistem enterprise, serta sistem berbasis data untuk operasional bisnis.",
       viewProjects: "Lihat Project",
       contactMe: "Hubungi Saya",
       downloadCv: "Unduh CV",
       stats: ["8+ Tahun Pengalaman", "10+ Project Portfolio", "Integrasi Sistem Enterprise"],
-      cardTitle: "Developer Engineer",
+      cardTitle: "Software Engineer",
       cardText: "Full stack development, integrasi enterprise, dan sistem berbasis database."
     },
     about: {
       eyebrow: "Tentang Saya",
       title: "Membangun sistem enterprise yang stabil, rapi, dan mudah dirawat.",
       paragraphs: [
-        "Sebagai Developer Engineer di Integrasi Logistik Cipta Solusi, saya berkontribusi pada integrasi sistem kritikal seperti P-Fuel dengan SAP untuk memastikan sinkronisasi data finansial dan inventori berjalan akurat. Fokus pekerjaan saya mencakup reliabilitas sistem, penyelesaian isu teknis, dan peningkatan efisiensi operasional melalui akses data real-time.",
+        "Sebagai Software Engineer di Integrasi Logistik Cipta Solusi, saya berkontribusi pada integrasi sistem kritikal seperti P-Fuel dengan SAP untuk memastikan sinkronisasi data finansial dan inventori berjalan akurat. Fokus pekerjaan saya mencakup reliabilitas sistem, penyelesaian isu teknis, dan peningkatan efisiensi operasional melalui akses data real-time.",
         "Dengan pengalaman lebih dari delapan tahun di software development, saya terbiasa merancang sistem yang skalabel, efisien, dan sesuai kebutuhan pengguna. Keahlian saya meliputi analisis sistem, maintenance, database management, dan solusi praktis untuk proyek level enterprise."
       ],
       highlights: [

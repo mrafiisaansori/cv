@@ -22,7 +22,8 @@ export default function PortfolioCard({ project, onOpen }: { project: Project; o
             src={imageError ? fallbackProjectImage : project.image}
             alt={project.title}
             fill
-            quality={74}
+            quality={62}
+            loading="lazy"
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
             unoptimized={imageError}
             onError={() => setImageError(true)}

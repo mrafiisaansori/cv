@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useInView, useReducedMotion } from "framer-motion";
 
 export default function Counter({
   to,
@@ -13,12 +12,35 @@ export default function Counter({
   duration?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
-  const reduceMotion = useReducedMotion();
+  const [inView, setInView] = useState(false);
   const [value, setValue] = useState(0);
 
   useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    if (!("IntersectionObserver" in window)) {
+      setInView(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px -40px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     if (!inView) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) {
       setValue(to);
       return;
@@ -34,7 +56,7 @@ export default function Counter({
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [inView, to, duration, reduceMotion]);
+  }, [inView, to, duration]);
 
   return (
     <span ref={ref}>

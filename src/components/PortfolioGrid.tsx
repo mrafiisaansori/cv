@@ -34,7 +34,7 @@ export default function PortfolioGrid() {
         </div>
       </div>
 
-      <PortfolioModal project={selected} onClose={() => setSelected(null)} />
+      {selected ? <PortfolioModal project={selected} onClose={() => setSelected(null)} /> : null}
     </section>
   );
 }

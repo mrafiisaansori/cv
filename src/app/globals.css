@@ -69,7 +69,67 @@ body {
   color: transparent;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 360ms ease,
+    transform 360ms ease;
+}
+
+.reveal-slide-left {
+  transform: translate3d(18px, 0, 0);
+}
+
+.reveal-slide-right {
+  transform: translate3d(-18px, 0, 0);
+}
+
+.reveal-scale-in {
+  transform: translate3d(0, 12px, 0) scale(0.98);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 520ms ease both;
+}
+
+.animate-fade-down {
+  animation: fade-down 180ms ease both;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
   *,
   *::before,
   *::after {

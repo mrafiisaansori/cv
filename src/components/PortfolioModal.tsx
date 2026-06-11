@@ -68,7 +68,7 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
                 alt={project.title}
                 fill
                 sizes="460px"
-                quality={80}
+                quality={72}
                 unoptimized={imageError}
                 onError={() => setImageError(true)}
                 className="object-cover object-center"

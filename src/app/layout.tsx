@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     siteName,
     images: [
       {
-        url: "/profile/profile.jpeg",
+        url: "/profile/profileku.png",
         width: 1200,
         height: 630,
         alt: "Muhammad Rafi Isa Ansori - Web Developer & Software Engineer"
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: seoTitle,
     description: seoDescription,
-    images: ["/profile/profile.jpeg"]
+    images: ["/profile/profileku.png"]
   },
   robots: {
     index: true,
@@ -122,7 +122,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         jobTitle: ["Web Developer", "Software Engineer", "Full Stack Developer"],
         description: seoDescription,
         url: siteUrl,
-        image: `${siteUrl}/profile/profile.jpeg`,
+        image: `${siteUrl}/profile/profileku.png`,
         email: "mailto:rafiisaansori@gmail.com",
         sameAs: ["https://www.linkedin.com/in/rafiisa/"],
         worksFor: {
@@ -168,7 +168,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           "Jasa pembuatan website dan aplikasi web profesional: company profile, sistem informasi, integrasi enterprise, dan platform custom yang cepat, modern, dan responsive.",
         serviceType: ["Jasa Pembuatan Web", "Web Development", "Software Development"],
         url: siteUrl,
-        image: `${siteUrl}/profile/profile.jpeg`,
+        image: `${siteUrl}/profile/profileku.png`,
         provider: { "@id": `${siteUrl}/#person` },
         areaServed: {
           "@type": "Country",

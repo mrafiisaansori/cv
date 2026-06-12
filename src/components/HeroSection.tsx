@@ -63,7 +63,7 @@ export default function HeroSection() {
                 priority
                 unoptimized={imageError}
                 sizes="(max-width: 768px) 86vw, 420px"
-                className="object-cover object-center"
+                className="scale-[1.16] object-cover object-[50%_38%]"
                 onError={() => setImageError(true)}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent" />

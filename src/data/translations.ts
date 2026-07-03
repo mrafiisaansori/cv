@@ -63,6 +63,9 @@ export const translations = {
       overview: "Project Overview",
       techStack: "Tech Stack",
       keyFeatures: "Key Features",
+      visitWebsite: "Visit Website",
+      inactiveUrl: "URL is not active",
+      closeNotification: "Close notification",
       liveDemo: "Live Demo",
       sourceCode: "Source Code",
       close: "Close project detail"
@@ -137,6 +140,9 @@ export const translations = {
       overview: "Ringkasan Project",
       techStack: "Tech Stack",
       keyFeatures: "Fitur Utama",
+      visitWebsite: "Buka Website",
+      inactiveUrl: "URL tidak aktif",
+      closeNotification: "Tutup notifikasi",
       liveDemo: "Demo Langsung",
       sourceCode: "Kode Sumber",
       close: "Tutup detail project"

@@ -13,7 +13,20 @@ const fallbackProjectImage =
 export default function PortfolioModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
   const { t, language } = useLanguage();
   const [imageError, setImageError] = useState(false);
+  const [showInactiveUrlNotice, setShowInactiveUrlNotice] = useState(false);
   const reduceMotion = useReducedMotion();
+  const hasUrlField = typeof project?.url !== "undefined";
+
+  const handleOpenUrl = () => {
+    const url = project?.url?.trim();
+
+    if (!url) {
+      setShowInactiveUrlNotice(true);
+      return;
+    }
+
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   useEffect(() => {
     if (!project) return;
@@ -29,6 +42,17 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
   }, [project, onClose]);
 
   useEffect(() => setImageError(false), [project?.slug]);
+
+  useEffect(() => {
+    setShowInactiveUrlNotice(false);
+  }, [project?.slug]);
+
+  useEffect(() => {
+    if (!showInactiveUrlNotice) return;
+
+    const timeoutId = window.setTimeout(() => setShowInactiveUrlNotice(false), 3200);
+    return () => window.clearTimeout(timeoutId);
+  }, [showInactiveUrlNotice]);
 
   return (
     <AnimatePresence>
@@ -92,8 +116,17 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
               <h3 className="mt-3 text-2xl font-bold leading-tight tracking-tight">{project.title}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">{project.description[language]}</p>
 
-              {(project.demo || project.repo) && (
+              {(hasUrlField || project.demo || project.repo) && (
                 <div className="mt-5 flex flex-wrap gap-2.5">
+                  {hasUrlField && (
+                    <button
+                      type="button"
+                      onClick={handleOpenUrl}
+                      className="inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2.5 text-sm font-semibold text-white shadow-brand transition hover:bg-brandDark"
+                    >
+                      {t.portfolio.visitWebsite} <ExternalLink size={15} />
+                    </button>
+                  )}
                   {project.demo && (
                     <a
                       href={project.demo}
@@ -116,6 +149,29 @@ export default function PortfolioModal({ project, onClose }: { project: Project 
                   )}
                 </div>
               )}
+
+              <AnimatePresence>
+                {showInactiveUrlNotice && (
+                  <motion.div
+                    role="status"
+                    initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -6 }}
+                    animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+                    exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -6 }}
+                    transition={{ duration: 0.18 }}
+                    className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-amber-300/70 bg-amber-50 px-3.5 py-2.5 text-sm font-medium text-amber-900 dark:border-amber-400/20 dark:bg-amber-400/10 dark:text-amber-100"
+                  >
+                    <span>{t.portfolio.inactiveUrl}</span>
+                    <button
+                      type="button"
+                      aria-label={t.portfolio.closeNotification}
+                      onClick={() => setShowInactiveUrlNotice(false)}
+                      className="grid h-7 w-7 flex-none place-items-center rounded-full text-amber-800 transition hover:bg-amber-200/60 dark:text-amber-100 dark:hover:bg-amber-300/15"
+                    >
+                      <X size={14} />
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               <div className="mt-7">
                 <h4 className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">

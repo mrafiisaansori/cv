@@ -15,6 +15,7 @@ export type Project = {
   };
   demo?: string;
   repo?: string;
+  url?: string;
 };
 
 export const projects: Project[] = [
@@ -32,7 +33,8 @@ export const projects: Project[] = [
     features: {
       en: ["Online fuel request", "Stock distribution", "SAP synchronization", "Usage analytics", "IoT fueling realization"],
       id: ["Permintaan BBM online", "Distribusi stok", "Sinkronisasi SAP", "Analitik penggunaan", "Realisasi pengisian IoT"]
-    }
+    },
+    url : "https://fuel.lamongenergi.co.id/",
   },
   {
     slug: "apbs",
@@ -48,7 +50,8 @@ export const projects: Project[] = [
     features: {
       en: ["Transaction request", "Approval workflow", "SAP-integrated billing", "User access management", "Cross-system integration"],
       id: ["Permintaan transaksi", "Alur persetujuan", "Penagihan terintegrasi SAP", "Manajemen akses pengguna", "Integrasi lintas sistem"]
-    }
+    },
+    url : "https://portal.ptapbs.com/",
   },
   {
     slug: "company-profile-pelindo",
@@ -64,7 +67,8 @@ export const projects: Project[] = [
     features: {
       en: ["Company information", "Services catalog", "Investor information", "Facilities", "Public information"],
       id: ["Informasi perusahaan", "Katalog layanan", "Informasi investor", "Fasilitas", "Informasi publik"]
-    }
+    },
+    url : "https://pelindosinergilokaseva.co.id/",
   },
   {
     slug: "linkatalog",
@@ -80,7 +84,8 @@ export const projects: Project[] = [
     features: {
       en: ["Shareable catalog link", "Product browsing", "Cart flow", "WhatsApp checkout", "Responsive storefront"],
       id: ["Tautan katalog yang dapat dibagikan", "Penjelajahan produk", "Alur keranjang", "Checkout WhatsApp", "Etalase responsif"]
-    }
+    },
+    url : "https://linkatalog.id/"
   },
   {
     slug: "clinic-management",
@@ -96,7 +101,8 @@ export const projects: Project[] = [
     features: {
       en: ["Patient registration", "Digital queue", "Medical records", "BPJS API integration", "Billing and reporting"],
       id: ["Pendaftaran pasien", "Antrean digital", "Rekam medis", "Integrasi API BPJS", "Penagihan dan pelaporan"]
-    }
+    },
+    url : "https://apps.kepanjeneyecenter.com/"
   },
   {
     slug: "pos",
@@ -112,7 +118,8 @@ export const projects: Project[] = [
     features: {
       en: ["Sales processing", "Inventory management", "Customer management", "Reporting", "User access control"],
       id: ["Pemrosesan penjualan", "Manajemen inventori", "Manajemen pelanggan", "Pelaporan", "Kontrol akses pengguna"]
-    }
+    },
+    url : "https://zonakasir.com/"
   },
   {
     slug: "hris",
@@ -128,7 +135,8 @@ export const projects: Project[] = [
     features: {
       en: ["Employee data management", "Attendance tracking", "Payroll management", "Document management", "Organizational structure"],
       id: ["Manajemen data karyawan", "Pencatatan absensi", "Manajemen penggajian", "Manajemen dokumen", "Struktur organisasi"]
-    }
+    },
+    url : "https://lavenia-house.web.id/"
   },
   {
     slug: "alumni-portal",
@@ -144,7 +152,8 @@ export const projects: Project[] = [
     features: {
       en: ["Registration form", "Data management", "WhatsApp gateway", "Login activity", "Alumni mapping"],
       id: ["Formulir pendaftaran", "Manajemen data", "WhatsApp gateway", "Aktivitas login", "Pemetaan alumni"]
-    }
+    },
+    url : "https://kartualumni.um.ac.id/user/registrasi"
   },
   {
     slug: "financial-integration",
@@ -160,7 +169,8 @@ export const projects: Project[] = [
     features: {
       en: ["Budget planning", "Approval workflow", "Disbursement tracking", "Payment management", "Financial reporting"],
       id: ["Perencanaan anggaran", "Alur persetujuan", "Pelacakan pencairan dana", "Manajemen pembayaran", "Pelaporan keuangan"]
-    }
+    },
+    url : "https://bbsmalang.com/"
   },
   {
     slug: "innovation-event",
@@ -176,7 +186,8 @@ export const projects: Project[] = [
     features: {
       en: ["Participant registration", "Initial screening", "Reviewer assignment", "Assessment workflow", "Result announcement"],
       id: ["Pendaftaran peserta", "Penyaringan awal", "Penugasan reviewer", "Alur penilaian", "Pengumuman hasil"]
-    }
+    },
+    url : ""
   },
   {
     slug: "open-recruitment",
@@ -192,7 +203,8 @@ export const projects: Project[] = [
     features: {
       en: ["Online registration", "Document upload", "Admin verification", "Selection stages", "Email notification"],
       id: ["Pendaftaran online", "Unggah dokumen", "Verifikasi admin", "Tahapan seleksi", "Notifikasi email"]
-    }
+    },
+    url : ""
   },
   {
     slug: "government-registration",
@@ -208,6 +220,7 @@ export const projects: Project[] = [
     features: {
       en: ["Public registration", "Document submission", "Verification workflow", "Responsive access", "Administrative reporting"],
       id: ["Pendaftaran publik", "Pengajuan dokumen", "Alur verifikasi", "Akses responsif", "Pelaporan administratif"]
-    }
+    },
+    url : "https://kesbangpolsmart.jombangkab.go.id/"
   }
 ];

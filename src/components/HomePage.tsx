@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
@@ -35,6 +36,44 @@ function SectionLoader() {
 }
 
 export default function HomePage() {
+  useEffect(() => {
+    const timeouts = new Set<number>();
+
+    const scrollToHash = (attempt = 0) => {
+      const hash = window.location.hash;
+      if (!hash) return;
+
+      const id = decodeURIComponent(hash.slice(1));
+      const element = document.getElementById(id);
+
+      if (!element) {
+        if (attempt < 40) {
+          const timeoutId = window.setTimeout(() => scrollToHash(attempt + 1), 100);
+          timeouts.add(timeoutId);
+        }
+        return;
+      }
+
+      const offset = id === "home" ? 0 : 96;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({
+        top: Math.max(top, 0),
+        behavior: attempt === 0 ? "smooth" : "auto"
+      });
+    };
+
+    const handleHashChange = () => scrollToHash();
+
+    scrollToHash();
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      timeouts.forEach((timeoutId) => window.clearTimeout(timeoutId));
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
   return (
     <LanguageProvider>
       <AnimatedBackground />

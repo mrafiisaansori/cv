@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Download, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, Code2, Download, Mail } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { profile } from "@/data/profile";
@@ -15,10 +15,10 @@ export default function HeroSection() {
     <section id="home" className="relative overflow-hidden px-4 pb-8 pt-24 sm:pb-10 sm:pt-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="relative z-10 animate-fade-up">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/[0.06] px-3.5 py-1.5 text-[13px] font-medium text-slate-700 backdrop-blur-sm dark:bg-brand/[0.1] dark:text-slate-200">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-70 motion-safe:animate-ping" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          <div className="mb-5 inline-flex items-center gap-2 text-[13px] font-medium text-slate-600 dark:text-slate-300">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-70 motion-safe:animate-ping" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
             </span>
             {t.hero.badge}
           </div>
@@ -28,7 +28,7 @@ export default function HeroSection() {
             <span className="text-gradient">{profile.name.split(" ").slice(2).join(" ")}</span>
           </h1>
 
-          <p className="mt-5 flex items-center gap-2 text-xl font-semibold text-brand dark:text-brandLight sm:text-2xl">
+          <p className="mt-5 text-xl font-semibold text-brand dark:text-brandLight sm:text-2xl">
             {t.hero.role}
           </p>
           <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-300/90 sm:text-[1.05rem]">
@@ -52,10 +52,9 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[420px] animate-fade-up [animation-delay:120ms]">
-          <div className="absolute -inset-6 rounded-[2.75rem] bg-gradient-to-br from-brand/25 via-violet/15 to-sky/15 blur-3xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-black/[0.06] bg-white/70 p-2.5 shadow-soft backdrop-blur-sm motion-safe:animate-float dark:border-white/[0.08] dark:bg-white/[0.05]">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] bg-slate-900">
+        <div className="relative mx-auto w-full max-w-[320px] animate-fade-up [animation-delay:120ms]">
+          <div className="group relative overflow-hidden rounded-3xl bg-white shadow-lg transition-transform duration-700 ease-out hover:scale-[1.02] dark:bg-zinc-900 dark:shadow-2xl dark:shadow-black/80">
+            <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src={imageError ? profile.fallbackImage : profile.image}
                 alt={profile.name}
@@ -63,25 +62,36 @@ export default function HeroSection() {
                 priority
                 unoptimized={imageError}
                 sizes="(max-width: 768px) 86vw, 420px"
-                className="scale-[1.16] object-cover object-[50%_38%]"
+                className="object-cover object-[50%_20%] transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 onError={() => setImageError(true)}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent" />
-              <div className="absolute bottom-3.5 left-3.5 right-3.5 rounded-2xl border border-white/12 bg-slate-950/55 p-3.5 text-white backdrop-blur-md">
-                <div className="flex items-center gap-2 text-sm font-semibold">
-                  <Sparkles size={15} className="text-sky" />
-                  {t.hero.cardTitle}
-                </div>
-                <p className="mt-1 text-xs leading-5 text-slate-300">{t.hero.cardText}</p>
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/50 to-transparent" />
+              <span className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-brand text-white shadow-brand">
+                <Code2 size={19} strokeWidth={2.2} />
+              </span>
+              <h2 className="absolute bottom-4 left-5 text-2xl font-semibold text-white drop-shadow-lg">
+                {profile.name}
+              </h2>
+            </div>
+            <div className="flex items-center justify-between p-4">
+              <div>
+                <p className="text-sm font-medium text-slate-700 dark:text-zinc-200">{profile.role}</p>
+                <p className="text-xs text-slate-500 dark:text-zinc-500">{profile.location}</p>
               </div>
+              <a
+                href="#contact"
+                className="rounded-lg bg-slate-900 px-2.5 py-1.5 text-xs font-medium text-white transition-transform duration-300 hover:scale-105 active:scale-95 dark:bg-zinc-800"
+              >
+                {t.hero.contactMe}
+              </a>
             </div>
           </div>
 
-          <div className="relative z-10 mt-4 grid grid-cols-3 gap-2.5">
+          <div className="relative z-10 mt-4 grid grid-cols-2 gap-2.5">
             {t.hero.stats.map((stat) => (
               <div
                 key={stat}
-                className="rounded-2xl border border-black/[0.06] bg-white/85 p-3 text-center text-[12px] font-semibold leading-snug text-slate-700 shadow-sm backdrop-blur-sm dark:border-white/[0.08] dark:bg-white/[0.06] dark:text-slate-200"
+                className="rounded-2xl border border-black/[0.06] bg-white p-3 text-center text-[12px] font-semibold leading-snug text-slate-700 dark:border-white/[0.08] dark:bg-white/[0.06] dark:text-slate-200"
               >
                 {stat}
               </div>

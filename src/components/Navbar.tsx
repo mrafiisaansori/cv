@@ -85,7 +85,7 @@ export default function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setOpen((value) => !value)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/70 text-slate-800 backdrop-blur-xl lg:hidden dark:border-white/10 dark:bg-white/[0.06] dark:text-white"
+            className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/70 text-slate-800 lg:hidden dark:border-white/10 dark:bg-white/[0.06] dark:text-white"
           >
             {open ? <X size={19} /> : <Menu size={19} />}
           </button>
@@ -93,7 +93,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="mx-auto mt-3 max-w-6xl overflow-hidden rounded-3xl border border-black/[0.06] bg-white/92 p-3 shadow-soft backdrop-blur-xl animate-fade-down lg:hidden dark:border-white/[0.08] dark:bg-[#0b0b16]/95">
+        <div className="mx-auto mt-3 max-w-6xl overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-soft animate-fade-down lg:hidden dark:border-white/[0.08] dark:bg-[#0b0b16]">
           <div className="mb-2 sm:hidden">
             <LanguageToggle />
           </div>

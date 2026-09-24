@@ -14,7 +14,7 @@ export default function PortfolioCard({ project, onOpen }: { project: Project; o
   const [imageError, setImageError] = useState(false);
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/[0.06] bg-white/80 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-brand/30 hover:shadow-soft md:hover:-translate-y-1 dark:border-white/[0.08] dark:bg-white/[0.04]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/[0.06] bg-white transition-colors duration-200 hover:border-brand/30 dark:border-white/[0.08] dark:bg-white/[0.03]">
       <button type="button" onClick={onOpen} className="flex h-full w-full flex-col text-left">
         {/* Prominent thumbnail */}
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#0b0b16]">

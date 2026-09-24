@@ -35,7 +35,7 @@ export default function SkillsSection() {
             {marquee.map((skill, index) => (
               <span
                 key={`${skill}-${index}`}
-                className="rounded-full border border-brand/15 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur-sm dark:bg-white/[0.05] dark:text-slate-200"
+                className="rounded-full border border-brand/15 bg-white px-4 py-2 text-sm font-semibold text-slate-700 dark:bg-white/[0.05] dark:text-slate-200"
               >
                 {skill}
               </span>
@@ -48,12 +48,11 @@ export default function SkillsSection() {
             const Icon = iconMap[category.icon];
 
             return (
-              <ScrollReveal key={category.title} delay={index * 0.04} className="group">
-                <div className="relative h-full overflow-hidden rounded-3xl border border-black/[0.06] bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-brand/30 hover:shadow-soft dark:border-white/[0.08] dark:bg-white/[0.04]">
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand to-transparent opacity-0 transition group-hover:opacity-100" />
+              <ScrollReveal key={category.title} delay={index * 0.04}>
+                <div className="h-full rounded-3xl border border-black/[0.06] bg-white p-6 transition-colors duration-200 hover:border-brand/30 dark:border-white/[0.08] dark:bg-white/[0.03]">
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand to-violet text-white shadow-brand">
-                      <Icon size={22} />
+                    <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand/10 text-brand dark:bg-brand/15 dark:text-brandLight">
+                      <Icon size={20} />
                     </div>
                     <span className="rounded-full bg-sky/12 px-3 py-1 text-xs font-bold text-sky-700 dark:text-sky">
                       {category.skills.length} skills
@@ -64,7 +63,7 @@ export default function SkillsSection() {
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="rounded-lg border border-black/[0.06] bg-black/[0.02] px-3 py-1.5 text-xs font-medium text-slate-600 transition group-hover:border-brand/20 dark:border-white/[0.06] dark:bg-white/[0.04] dark:text-slate-300"
+                        className="rounded-lg border border-black/[0.06] bg-black/[0.02] px-3 py-1.5 text-xs font-medium text-slate-600 dark:border-white/[0.06] dark:bg-white/[0.04] dark:text-slate-300"
                       >
                         {skill}
                       </span>

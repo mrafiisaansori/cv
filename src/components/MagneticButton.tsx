@@ -29,7 +29,7 @@ export default function MagneticButton({
     primary:
       "bg-brand text-white shadow-brand hover:bg-brandDark",
     secondary:
-      "border border-black/10 bg-white/80 text-slate-900 backdrop-blur-sm hover:border-brand/40 hover:bg-white dark:border-white/12 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/[0.1]",
+      "border border-black/10 bg-white text-slate-900 hover:border-brand/40 dark:border-white/12 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/[0.1]",
     ghost:
       "border border-black/10 bg-transparent text-slate-700 hover:border-brand/30 hover:bg-brand/[0.04] hover:text-brand dark:border-white/12 dark:text-slate-200 dark:hover:bg-white/[0.06] dark:hover:text-white"
   };

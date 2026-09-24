@@ -21,10 +21,8 @@ export default function ContactSection() {
   return (
     <section id="contact" className="px-4 py-5 sm:py-8">
       <div className="mx-auto max-w-6xl">
-        <ScrollReveal className="relative overflow-hidden rounded-[2rem] border border-black/[0.06] bg-gradient-to-br from-brand to-violet p-8 text-white shadow-brand sm:p-12">
-          <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/15 blur-3xl" />
-          <div className="absolute -bottom-12 left-1/4 h-48 w-48 rounded-full bg-sky/25 blur-3xl" />
-          <div className="relative flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <ScrollReveal className="rounded-[2rem] border border-black/[0.06] bg-gradient-to-br from-brand to-violet p-8 text-white shadow-brand sm:p-12">
+          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-white/80">{t.sections.contactEyebrow}</p>
               <h2 className="mt-3 max-w-2xl text-3xl font-bold leading-tight tracking-tight sm:text-[2.5rem]">
@@ -46,11 +44,11 @@ export default function ContactSection() {
               <a
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
-                className="group flex min-h-40 flex-col justify-between rounded-3xl border border-black/[0.06] bg-white/70 p-5 shadow-sm backdrop-blur-sm transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-brand/30 hover:shadow-soft dark:border-white/[0.08] dark:bg-white/[0.04]"
+                className="group flex min-h-40 flex-col justify-between rounded-3xl border border-black/[0.06] bg-white p-5 transition-colors duration-200 hover:border-brand/30 dark:border-white/[0.08] dark:bg-white/[0.03]"
               >
                 <div className="flex items-center justify-between">
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand to-violet text-white shadow-brand">
-                    <Icon size={21} />
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand/10 text-brand dark:bg-brand/15 dark:text-brandLight">
+                    <Icon size={20} />
                   </span>
                   <ArrowUpRight size={18} className="text-slate-400 transition group-hover:text-brand dark:text-slate-500 dark:group-hover:text-brandLight" />
                 </div>

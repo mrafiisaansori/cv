@@ -20,7 +20,7 @@ export const translations = {
       viewProjects: "View Projects",
       contactMe: "Contact Me",
       downloadCv: "Download CV",
-      stats: ["8+ Years Experience", "10+ Portfolio Projects", "Enterprise System Integration"],
+      stats: ["8+ Years Experience", "10+ Portfolio Projects"],
       cardTitle: "Software Engineer",
       cardText: "Full stack development, enterprise integration, and database-driven systems."
     },
@@ -97,7 +97,7 @@ export const translations = {
       viewProjects: "Lihat Project",
       contactMe: "Hubungi Saya",
       downloadCv: "Unduh CV",
-      stats: ["8+ Tahun Pengalaman", "10+ Project Portfolio", "Integrasi Sistem Enterprise"],
+      stats: ["8+ Tahun Pengalaman", "10+ Project Portfolio"],
       cardTitle: "Software Engineer",
       cardText: "Full stack development, integrasi enterprise, dan sistem berbasis database."
     },

@@ -38,7 +38,7 @@ export default function AboutSection() {
         </ScrollReveal>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <ScrollReveal className="rounded-3xl border border-black/[0.06] bg-white/70 p-6 shadow-soft backdrop-blur-sm dark:border-white/[0.08] dark:bg-white/[0.04] sm:p-8">
+          <ScrollReveal className="rounded-3xl border border-black/[0.06] bg-white p-6 dark:border-white/[0.08] dark:bg-white/[0.03] sm:p-8">
             <div className="space-y-5 text-[15px] leading-8 text-slate-600 dark:text-slate-300/90">
               {t.about.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -60,10 +60,10 @@ export default function AboutSection() {
             {icons.map(({ label, Icon }) => (
               <div
                 key={label}
-                className="group rounded-3xl border border-black/[0.06] bg-white/65 p-5 shadow-sm backdrop-blur-sm transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-brand/30 hover:shadow-soft dark:border-white/[0.08] dark:bg-white/[0.04]"
+                className="group rounded-3xl border border-black/[0.06] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-brand dark:border-white/[0.08] dark:bg-white/[0.03]"
               >
-                <div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand to-violet text-white shadow-brand">
-                  <Icon size={22} />
+                <div className="mb-5 grid h-11 w-11 place-items-center rounded-xl bg-brand/10 text-brand transition-colors duration-300 group-hover:bg-brand group-hover:text-white dark:bg-brand/15 dark:text-brandLight">
+                  <Icon size={20} />
                 </div>
                 <p className="text-lg font-bold text-slate-950 dark:text-white">{label}</p>
                 <p className="mt-2 text-[13px] leading-6 text-slate-500 dark:text-slate-400">{t.about.cardText}</p>
@@ -77,9 +77,8 @@ export default function AboutSection() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="relative overflow-hidden rounded-3xl border border-black/[0.06] bg-white/70 p-6 text-center shadow-sm backdrop-blur-sm dark:border-white/[0.08] dark:bg-white/[0.04]"
+              className="rounded-3xl border border-black/[0.06] bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-brand dark:border-white/[0.08] dark:bg-white/[0.03]"
             >
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
               <p className="text-4xl font-extrabold tracking-tight text-gradient sm:text-5xl">
                 <Counter to={stat.value} suffix={stat.suffix} />
               </p>

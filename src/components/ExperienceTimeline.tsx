@@ -43,7 +43,7 @@ export default function ExperienceTimeline() {
                     )}
                   </span>
 
-                  <article className="group overflow-hidden rounded-3xl border border-black/[0.06] bg-white/80 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-brand/30 hover:shadow-soft dark:border-white/[0.08] dark:bg-white/[0.04]">
+                  <article className="overflow-hidden rounded-3xl border border-black/[0.06] bg-white transition-colors duration-200 hover:border-brand/30 dark:border-white/[0.08] dark:bg-white/[0.03]">
                     <div className="flex flex-col gap-4 border-b border-black/[0.05] p-5 dark:border-white/[0.06] sm:flex-row sm:items-start sm:justify-between sm:p-6">
                       <div className="min-w-0">
                         <div className="flex flex-wrap items-center gap-2">
